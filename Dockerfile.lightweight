@@ -12,14 +12,11 @@ RUN apt-get update && apt-get install -y \
 # Upgrade pip
 RUN pip install --upgrade pip
 
-# Install Python dependencies
-RUN pip install --no-cache-dir \
-    git+https://github.com/huggingface/diffusers \
-    transformers \
-    accelerate \
-    safetensors \
-    pillow \
-    runpod
+# Copy requirements file
+COPY requirements.txt /app/requirements.txt
+
+# Install Python dependencies from requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy handler script
 COPY handler.py /app/handler.py
