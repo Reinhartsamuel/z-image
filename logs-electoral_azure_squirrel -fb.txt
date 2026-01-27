@@ -1,0 +1,500 @@
+2026-01-27  16:58:30.179 | error | 4p1sozwpapfp2k | worker exited with exit code 1
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     download_files(\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     xet_get(\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     _download_to_tmp_and_move(\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     raise self._exception\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     return self.__get_result()\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     return fut.result(timeout)\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |     for obj in iterable:\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:58:19.929 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     thread_map(\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     cached_folder = snapshot_download(\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     cached_folder = cls.download(\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:58:19.928 | info | 4p1sozwpapfp2k |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:58:19.926 | info | 4p1sozwpapfp2k |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:58:19.926 | info | 4p1sozwpapfp2k | Traceback (most recent call last):\n
+2026-01-27  16:58:18.017 | info | 4p1sozwpapfp2k | \rFetching 18 files:  22%|██▏       | 4/18 [02:45<11:20, 48.63s/it]\rFetching 18 files:  28%|██▊       | 5/18 [02:51<07:47, 35.93s/it]\rFetching 18 files:  67%|██████▋   | 12/18 [03:21<01:40, 16.79s/it]\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | By pulling and using the container, you accept the terms and conditions of this license:\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | This container image and its contents are governed by the NVIDIA Deep Learning Container License.\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | CUDA Version 12.4.1\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | ==========\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | == CUDA ==\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | ==========\n
+2026-01-27  16:53:58.819 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:53:52.649 | error | 4p1sozwpapfp2k | worker exited with exit code 1
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     download_files(\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     xet_get(\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     _download_to_tmp_and_move(\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     raise self._exception\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     return self.__get_result()\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     return fut.result(timeout)\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     for obj in iterable:\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:53:40.931 | info | 4p1sozwpapfp2k |     thread_map(\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |     cached_folder = snapshot_download(\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |     cached_folder = cls.download(\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:53:40.930 | info | 4p1sozwpapfp2k |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:53:39.534 | info | 4p1sozwpapfp2k | Traceback (most recent call last):\n
+2026-01-27  16:53:32.635 | info | 4p1sozwpapfp2k | \rFetching 18 files:  67%|██████▋   | 12/18 [00:32<00:16,  2.69s/it]\n
+2026-01-27  16:52:52.414 | error | 4p1sozwpapfp2k | worker exited with exit code 1
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |     download_files(\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |     xet_get(\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |     _download_to_tmp_and_move(\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:52:45.906 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     raise self._exception\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return self.__get_result()\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return fut.result(timeout)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     for obj in iterable:\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     thread_map(\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     cached_folder = snapshot_download(\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     cached_folder = cls.download(\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:52:45.905 | info | 4p1sozwpapfp2k | Traceback (most recent call last):\n
+2026-01-27  16:52:44.706 | info | 4p1sozwpapfp2k | \rFetching 18 files:  67%|██████▋   | 12/18 [00:35<00:17,  2.96s/it]\n
+2026-01-27  16:52:01.403 | error | 4p1sozwpapfp2k | worker exited with exit code 1
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |     download_files(\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |     xet_get(\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |     _download_to_tmp_and_move(\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.791 | info | 4p1sozwpapfp2k |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     raise self._exception\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return self.__get_result()\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return fut.result(timeout)\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     for obj in iterable:\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     thread_map(\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     cached_folder = snapshot_download(\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.790 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |     cached_folder = cls.download(\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:52:00.789 | info | 4p1sozwpapfp2k |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:51:59.326 | info | 4p1sozwpapfp2k | Traceback (most recent call last):\n
+2026-01-27  16:51:56.632 | info | 4p1sozwpapfp2k | \rFetching 18 files:  67%|██████▋   | 12/18 [00:36<00:18,  3.05s/it]\n
+2026-01-27  16:51:56.632 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:20,346 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo/xet-read-token/0e36c2b379e66fa531d01cc531c44919e5f1c6fd "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:20.321 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:20,320 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo/xet-read-token/0e36c2b379e66fa531d01cc531c44919e5f1c6fd "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:20.321 | info | 4p1sozwpapfp2k |   warnings.warn(\n
+2026-01-27  16:51:20.321 | info | 4p1sozwpapfp2k | /usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:760: UserWarning: Not enough free disk space to download the file. The expected file size is: 9973.71 MB. The target location /root/.cache/huggingface/hub/models--Tongyi-MAI--Z-Image-Turbo/blobs only has 2.64 MB free disk space.\n
+2026-01-27  16:51:20.321 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:20,225 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/transformer/diffusion_pytorch_model-00002-of-00003.safetensors "HTTP/1.1 302 Found"\n
+2026-01-27  16:51:20.321 | info | 4p1sozwpapfp2k |   warnings.warn(\n
+2026-01-27  16:51:20.321 | info | 4p1sozwpapfp2k | /usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:760: UserWarning: Not enough free disk space to download the file. The expected file size is: 9973.69 MB. The target location /root/.cache/huggingface/hub/models--Tongyi-MAI--Z-Image-Turbo/blobs only has 2.64 MB free disk space.\n
+2026-01-27  16:51:20.193 | info | 4p1sozwpapfp2k | \rFetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]_client.py          :1038 2026-01-27 09:51:20,192 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/transformer/diffusion_pytorch_model-00001-of-00003.safetensors "HTTP/1.1 302 Found"\n
+2026-01-27  16:51:20.051 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:20,050 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo/revision/main "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:20.051 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:19,920 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Tongyi-MAI/Z-Image-Turbo/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/model_index.json "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:19.911 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:19,910 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"\n
+2026-01-27  16:51:19.773 | info | 4p1sozwpapfp2k | _client.py          :1038 2026-01-27 09:51:19,772 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | Loading Z-Image-Turbo model...\n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.\n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license\n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | By pulling and using the container, you accept the terms and conditions of this license:\n
+2026-01-27  16:51:19.574 | info | 4p1sozwpapfp2k | This container image and its contents are governed by the NVIDIA Deep Learning Container License.\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | CUDA Version 12.4.1\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | ==========\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | == CUDA ==\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | ==========\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | \n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     download_files(\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     xet_get(\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     _download_to_tmp_and_move(\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     raise self._exception\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     return self.__get_result()\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     return fut.result(timeout)\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     for obj in iterable:\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:51:19.573 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     thread_map(\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     cached_folder = snapshot_download(\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     cached_folder = cls.download(\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:51:19.572 | info | 4p1sozwpapfp2k | Traceback (most recent call last):\n
+2026-01-27  16:51:15.546 | error | qu0keaak2nmrr4 | worker exited with exit code 1
+2026-01-27  16:51:12.483 | error | 4p1sozwpapfp2k | worker exited with exit code 1
+2026-01-27  16:51:10.879 | info | qu0keaak2nmrr4 | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:51:10.879 | info | qu0keaak2nmrr4 |     download_files(\n
+2026-01-27  16:51:10.879 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:51:10.879 | info | qu0keaak2nmrr4 |     xet_get(\n
+2026-01-27  16:51:10.879 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     _download_to_tmp_and_move(\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     raise self._exception\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return self.__get_result()\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return fut.result(timeout)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     for obj in iterable:\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     thread_map(\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     cached_folder = snapshot_download(\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     cached_folder = cls.download(\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:51:10.878 | info | qu0keaak2nmrr4 |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     download_files(\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     xet_get(\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     _download_to_tmp_and_move(\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     raise self._exception\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     return self.__get_result()\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     return fut.result(timeout)\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     yield _result_or_cancel(fs.pop())\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     for obj in iterable:\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/std.py", line 1181, in __iter__\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.470 | info | 4p1sozwpapfp2k |     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/tqdm/contrib/concurrent.py", line 69, in thread_map\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     thread_map(\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 449, in snapshot_download\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     cached_folder = snapshot_download(\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 1772, in download\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |                     ^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     cached_folder = cls.download(\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/diffusers/pipelines/pipeline_utils.py", line 847, in from_pretrained\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     return fn(*args, **kwargs)\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:51:10.469 | info | 4p1sozwpapfp2k |     pipe = ZImagePipeline.from_pretrained(\n
+2026-01-27  16:51:10.468 | info | 4p1sozwpapfp2k |   File "/app/handler.py", line 10, in <module>\n
+2026-01-27  16:51:08.826 | info | 4p1sozwpapfp2k | Traceback (most recent call last):\n
+2026-01-27  16:51:08.634 | info | qu0keaak2nmrr4 | Traceback (most recent call last):\n
+2026-01-27  16:51:04.933 | info | 4p1sozwpapfp2k | \rFetching 18 files:  67%|██████▋   | 12/18 [00:54<00:27,  4.53s/it]\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | \rFetching 18 files:  67%|██████▋   | 12/18 [00:12<00:06,  1.06s/it]\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 |   warnings.warn(\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | /usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:760: UserWarning: Not enough free disk space to download the file. The expected file size is: 9973.69 MB. The target location /root/.cache/huggingface/hub/models--Tongyi-MAI--Z-Image-Turbo/blobs only has 4.08 MB free disk space.\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,573 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/transformer/diffusion_pytorch_model-00001-of-00003.safetensors "HTTP/1.1 302 Found"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,404 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo/xet-read-token/0e36c2b379e66fa531d01cc531c44919e5f1c6fd "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,350 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo/xet-read-token/0e36c2b379e66fa531d01cc531c44919e5f1c6fd "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 |   warnings.warn(\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | /usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:760: UserWarning: Not enough free disk space to download the file. The expected file size is: 9973.71 MB. The target location /root/.cache/huggingface/hub/models--Tongyi-MAI--Z-Image-Turbo/blobs only has 4.09 MB free disk space.\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,347 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/transformer/diffusion_pytorch_model-00002-of-00003.safetensors "HTTP/1.1 302 Found"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 |   warnings.warn(\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | /usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:760: UserWarning: Not enough free disk space to download the file. The expected file size is: 4672.28 MB. The target location /root/.cache/huggingface/hub/models--Tongyi-MAI--Z-Image-Turbo/blobs only has 4.10 MB free disk space.\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | \rFetching 18 files:   0%|          | 0/18 [00:00<?, ?it/s]_client.py          :1038 2026-01-27 09:50:51,288 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/transformer/diffusion_pytorch_model-00003-of-00003.safetensors "HTTP/1.1 302 Found"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,224 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo/revision/main "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,161 HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Tongyi-MAI/Z-Image-Turbo/0e36c2b379e66fa531d01cc531c44919e5f1c6fd/model_index.json "HTTP/1.1 200 OK"\n
+2026-01-27  16:51:04.054 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,148 HTTP Request: HEAD https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/resolve/main/model_index.json "HTTP/1.1 307 Temporary Redirect"\n
+2026-01-27  16:51:04.041 | info | qu0keaak2nmrr4 | _client.py          :1038 2026-01-27 09:50:51,093 HTTP Request: GET https://huggingface.co/api/models/Tongyi-MAI/Z-Image-Turbo "HTTP/1.1 200 OK"\n
+2026-01-27  16:50:43.686 | error | qu0keaak2nmrr4 | worker exited with exit code 1
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 | RuntimeError: Data processing error: CAS service error : IO Error: No space left on device (os error 28)\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     download_files(\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 588, in xet_get\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     xet_get(\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1864, in _download_to_tmp_and_move\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     _download_to_tmp_and_move(\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1240, in _hf_hub_download_to_cache_dir\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     return _hf_hub_download_to_cache_dir(\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py", line 1024, in hf_hub_download\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     return fn(*args, **kwargs)\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     hf_hub_download(  # type: ignore\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/local/lib/python3.11/dist-packages/huggingface_hub/_snapshot_download.py", line 429, in _inner_hf_hub_download\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     result = self.fn(*self.args, **self.kwargs)\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/thread.py", line 58, in run\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     raise self._exception\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |            ^^^^^^^^^^^^^^^^^^^\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |     return self.__get_result()\n
+2026-01-27  16:50:39.937 | info | qu0keaak2nmrr4 |   File "/usr/lib/python3.11/concurrent/futures/_base.py", line 456, in result\n

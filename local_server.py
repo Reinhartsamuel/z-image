@@ -61,12 +61,10 @@ async def load_model():
     )
     pipe.to("cuda")
 
-    # Flash Attention can cause compatibility issues with some PyTorch versions
-    # Disable it for maximum compatibility
+    # Use eager attention for maximum compatibility with PyTorch versions
     try:
-        # Try to set attention backend to default/sdpa instead of flash
-        pipe.transformer.set_attention_backend("sdpa")
-        print("SDPA Attention backend enabled")
+        pipe.transformer.set_attention_backend("eager")
+        print("Eager attention backend enabled")
     except Exception as e:
         print(f"Could not set attention backend: {e}")
         # Continue anyway, model will use default attention
