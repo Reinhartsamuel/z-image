@@ -14,12 +14,14 @@ pipe = ZImagePipeline.from_pretrained(
 )
 pipe.to("cuda")
 
-# Optional: Enable Flash Attention for better efficiency
+# Optional: Configure attention backend
+# Flash Attention can cause compatibility issues with some PyTorch versions
 try:
-    pipe.transformer.set_attention_backend("flash")
-    print("Flash Attention enabled")
+    pipe.transformer.set_attention_backend("sdpa")
+    print("SDPA Attention backend enabled")
 except Exception as e:
-    print(f"Flash Attention not available: {e}")
+    print(f"Could not set attention backend: {e}")
+    # Continue anyway, model will use default attention
 
 # Optional: Compile the model for faster inference (first run will be slower)
 # Uncomment the line below if you want to enable compilation
