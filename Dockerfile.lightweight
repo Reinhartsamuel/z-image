@@ -1,0 +1,32 @@
+FROM runpod/pytorch:2.1.0-py3.10-cuda12.1.0-devel-ubuntu22.04
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip
+RUN pip install --upgrade pip
+
+# Install Python dependencies
+RUN pip install --no-cache-dir \
+    git+https://github.com/huggingface/diffusers \
+    transformers \
+    accelerate \
+    safetensors \
+    pillow \
+    runpod
+
+# Copy handler script
+COPY handler.py /app/handler.py
+
+# NOTE: Model downloads on first run (~14GB)
+# This keeps the image lightweight (~5GB) for faster builds
+# Trade-off: Longer cold start time on RunPod
+
+# Set the entrypoint
+CMD ["python", "-u", "handler.py"]
