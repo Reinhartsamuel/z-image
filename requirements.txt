@@ -1,4 +1,4 @@
-diffusers==0.30.0
+git+https://github.com/huggingface/diffusers.git
 transformers==4.44.0
 accelerate==0.31.0
 safetensors>=0.3.1
