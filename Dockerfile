@@ -1,4 +1,4 @@
-FROM runpod/pytorch:2.4.0-py3.11-cuda12.4.1-devel-ubuntu22.04
+FROM runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04
 
 # Set working directory
 WORKDIR /app
@@ -11,9 +11,6 @@ RUN apt-get update && apt-get install -y \
 
 # Upgrade pip
 RUN pip install --upgrade pip
-
-# Upgrade PyTorch to support enable_gqa parameter used by latest diffusers
-RUN pip install --upgrade torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 
 # Copy requirements file
 COPY requirements.txt /app/requirements.txt
