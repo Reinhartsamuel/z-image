@@ -12,6 +12,9 @@ RUN apt-get update && apt-get install -y \
 # Upgrade pip
 RUN pip install --upgrade pip
 
+# Upgrade PyTorch to support enable_gqa parameter used by latest diffusers
+RUN pip install --upgrade torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+
 # Copy requirements file
 COPY requirements.txt /app/requirements.txt
 
